@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Selection</title>
+    <style>
+        .slot {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .slot.selected {
+            background-color: #ff5733;
+        }
+
+        .slot.blocked {
+            background-color: #888;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="slot" id="slot1" onclick="toggleSlot('slot1')">Slot 1</div>
+    <div class="slot" id="slot2" onclick="toggleSlot('slot2')">Slot 2</div>
+    <div class="slot" id="slot3" onclick="toggleSlot('slot3')">Slot 3</div>
+    <button onclick="performAction()">Perform Action</button>
+
+    <script>
+        let selectedSlot = null;
+
+        function toggleSlot(slotId) {
+            const slot = document.getElementById(slotId);
+
+            if (slot.classList.contains('selected')) {
+                // Deselect the slot
+                slot.classList.remove('selected');
+                selectedSlot = null;
+            } else {
+                // Select the slot and block others
+                if (selectedSlot) {
+                    document.getElementById(selectedSlot).classList.remove('selected');
+                }
+                slot.classList.add('selected');
+                selectedSlot = slotId;
+            }
+
+            // Block all slots except the selected one
+            const allSlots = document.querySelectorAll('.slot');
+            allSlots.forEach((s) => {
+                if (s.id !== selectedSlot) {
+                    s.classList.add('blocked');
+                } else {
+                    s.classList.remove('blocked');
+                }
+            });
+        }
+
+        function performAction() {
+            if (!selectedSlot) {
+                alert("Please select a slot before performing the action.");
+            } else {
+                // Perform the action here
+                alert("Action performed on Slot " + selectedSlot);
+            }
+        }
+    </script>
+</body>
+</html>
