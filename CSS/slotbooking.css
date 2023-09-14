@@ -6,7 +6,7 @@ nav{
   box-shadow:2px 2px 10px rgba(0,0,0.15) ;
   padding: 1vw 8vw;
   position: fixed;
-  width: 85%;
+  width: 100%;
   background-color:rgb(255, 43, 43);
   z-index: 100;
 }
@@ -87,16 +87,6 @@ margin-left: 370px;
 margin-top: 40px;
 }
   
-<<<<<<< HEAD
-  .submitbutton{
-    padding-left: 11px;
-    padding-right: 11px;
-    padding-top: 11px;
-    padding-bottom: 9px;
-    margin-left: 10px;
-  }
-
-=======
   
 input.submitbutton{
   padding: 10px;
@@ -105,7 +95,6 @@ input.submitbutton{
   
   
 }
->>>>>>> origin/venkat
 
 
 .row{
@@ -160,7 +149,7 @@ input.submitbutton{
   padding: 10px;
   border: 2px solid black;
   padding-top: 10px;
-  background-color: #888;
+  background-color: #fff;
   border-radius: 6px;
   display: inline-block;
 }
@@ -196,13 +185,12 @@ input.submitbutton{
 .slotsize1 {
       width: 50px;
       height: 50px;
-      background-color: #888; /* Default background color for seats */
+      background-color: #eee; /* Default background color for seats */
       border: 1px solid #ccc;
       font-size: 18px;
       text-align: center;
       cursor: pointer;
 }
-
 /*  
 .slotsize1.blocked {
   background-color: red; /* Background color for blocked seats 
@@ -211,8 +199,17 @@ input.submitbutton{
   font-weight:bold;
 } */
 /* Styling for selected seats */
+.selected1{
+  background-color: green; /* Change this to your desired highlight color */
+  color: #ffffff; /* Text color for selected seat */
+  font-weight: bold;
 
-
+}
+.slotsize1.selected {
+  background-color: green; /* Change this to your desired highlight color */
+  color: #ffffff; /* Text color for selected seat */
+  font-weight: bold;
+}
 .slot{
   padding-left: 100px;
 }
@@ -317,8 +314,13 @@ footer {
   nav .navigation ul li a{
     color:#ffffff ; 
   }
-
-
+  .row .slotsize{
+    flex-direction: column; /* Stack columns on top of each other */
+}
+.row.datesearch{
+    flex-direction: column;
+    
+}
 .col-4.dateblock{
     padding: 1px;
 }
@@ -337,7 +339,11 @@ footer {
     padding: 5px; /* Add padding to the button */
 }
 
-
+.slotsize1 {
+    width: 100%; /* Make seat buttons full width on smaller screens */
+    margin: 5px 0; /* Add vertical spacing between seat buttons */
+}
+}
 /* pre {
    */
 /* font-size: 0.9rem};  */
@@ -391,8 +397,7 @@ img {vertical-align: middle;}
   background-color: #717171;
 }
 
-/* 
-Fading animation 
+/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -403,7 +408,8 @@ Fading animation
   to {opacity: 1}
 }
 
- On smaller screens, decrease text size 
+/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
-} */}
+}
+
