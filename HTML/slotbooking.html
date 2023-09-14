@@ -10,6 +10,22 @@
 </head>
   <link rel="stylesheet" href="/CSS/slotbooking.css">
   <title>Document</title>
+<<<<<<< HEAD
+</head>
+<style>
+
+
+    .slotsize1.selected {
+        background-color: green;
+    }
+
+    .slotsize1.avaliable {
+        background-color: #888;
+        
+    }
+</style>
+=======
+>>>>>>> origin/venkat
 </head>
 <body>
   <section class="pre-hm">
@@ -23,8 +39,13 @@
           <i id="menu-close" class="fas fa-times"></i>
             <li><a class="hme" href="INDEX.HTML">HOME</a></li>
             <li><a class="abt" href="#">ABOUT</a></li>
+<<<<<<< HEAD
+            <li><a class="lgn" href="INDEX.HTML" >LOGOUT</a></li>
+            <li><a  class="cnt"href="#foot1">CONTACT</a></li>
+=======
             <li><a class="lgn" href="ALTLOGIN.HTML" >LOGIN</a></li>
             <li><a  class="cnt"href="INDEX.HTML">CONTACT</a></li>
+>>>>>>> origin/venkat
             <!-- <nav class="hamburgericon"><a href="javascript:void(0);" onclick="dropdownmenu()">&#9776</a></nav> -->
 
     </ul>
@@ -40,6 +61,249 @@
         <form action="" id="search_slot">
         <div class="col-4 dateblock">  
             <label class="datename" for="datemonth"><b>Date</b></label>
+<<<<<<< HEAD
+            <input type="date" class="dateinput" id="datemonth" name="datemonth" min="" required>
+            <input onclick="submit_by_id()"  type="submit" class="submitbutton">
+        </div>  
+
+      </form>
+
+    </div>
+    <div>
+
+ 
+
+    </div>
+
+    <div class="row slotsize" id="slots" style="display: none;">
+
+        <div class="row row-1" >
+            <div class="col-2"><button class="slotsize1" id="slot1" onclick="toggleSlot('slot1')">1</button></div>
+            <div class="col-2"><button class="slotsize1" id="slot2" onclick="toggleSlot('slot2')">2</button></div>
+            <div class="col-2"><button class="slotsize1" id="slot3" onclick="toggleSlot('slot3')">3</button></div>
+            <div class="col-2"><button class="slotsize1" id="slot4" onclick="toggleSlot('slot4')">4</button></div>
+            <div class="col-2"><button class="slotsize1" id="slot5" onclick="toggleSlot('slot5')">5</button></div>
+        </div>  
+    <div class="row row-2">    
+        <div class="col-2"><button class="slotsize1" id="slot6" onclick="toggleSlot('slot6')">6</button></div>
+        <div class="col-2"><button class="slotsize1" id="slot7" onclick="toggleSlot('slot7')">7</button></div>
+        <div class="col-2"><button class="slotsize1" id="slot8" onclick="toggleSlot('slot8')">8</button></div>
+        <div class="col-2"><button class="slotsize1" id="slot9" onclick="toggleSlot('slot9')">9</button></div>
+        <div class="col-2"><button class="slotsize1" id="slot10" onclick="toggleSlot('slot10')">10</button></div>
+
+    </div>
+
+<ul class="required">
+    <div class="slot1">
+        <li>
+            <div class="slot ">
+
+                <div class="space na"></div>
+
+                <medium>Avaliable</medium>
+            </div>
+        </li>
+        <li>
+            <div class="slot occupied">
+                <div class="space occupied"></div>
+                <medium>Occupied</medium>
+            </div>
+        </li>
+        <li>
+            <div class="slot selected">
+                <div class="space selected"></div>
+                <medium>Selected</medium>
+            </div>
+        </li>
+    </div>
+</ul>
+<div>
+  <button class="bookslot"  onclick="performAction()" ><b>Book Slot</b</button>
+</div>  
+</div>
+
+       
+
+            <!-- <tr>
+
+                <th><button>13</button></th>
+
+                <th><button>14</button></th>
+
+                <th><button>15</button></th>
+
+                <th><button>16</button></th>
+
+                <th><button>17</button></th>
+
+                <th><button>18</button></th>
+
+                <th><button>19</button></th>
+
+                <th><button>20</button></th>
+
+                <th><button>21</button></th>
+
+                <th><button>22</button></th>
+
+                <th><button>23</button></th>
+
+                <th><button>24</button></th>
+
+            </tr> -->
+
+       
+
+   
+
+</div>
+</div>
+<footer class="foot" id="foot1">
+  <div class="container">
+    <div class="contact-details">
+      <h3>Contact Us</h3>
+      <p>Email: example@email.com</p>
+      <p>Phone: +1 (123) 456-7890</p>
+      <p>Address: 123 Street, City, Country</p>
+    </div>
+    <div class="social-icons">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <!-- Add more social media icons as needed -->
+
+      </ul>
+    </div>
+  </div>
+
+</footer>
+
+ 
+
+</body>
+
+<!-- <script>
+
+    function myFunction() {
+
+        var x = document.getElementById("myDIV");
+
+        if (x.style.display === "none") {
+
+            x.style.display = "block";
+
+        } else {
+
+            x.style.display = "none";
+
+        }
+
+    }
+
+</script> -->
+
+<script>
+  let selectedSeat = null;
+  function selectSeat(slotsize1) {
+    if (selectedSeat) {
+          // Deselect the previously selected seat
+          selectedSeat.classList.remove('selected1');
+    }
+
+      // Select the clicked seat
+    seat.classList.add('selected1');
+    selectedSeat = slotsize1;
+}
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   document.getElementById("datemonth").min = new Date().getFullYear() + "-" +  parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate()
+// });
+
+
+   // Get the input element
+   var datePicker = document.getElementById('datemonth');
+        
+        // Get the current date in the format YYYY-MM-DD
+        var today = new Date().toISOString().split('T')[0];
+        
+        // Set the minimum date to the current date
+        datePicker.min = today;
+  // document.getElementById("datemonth").min = new Date().getFullYear() + "-" +  parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate()
+
+
+//call the datemonth id and then check the condition wheather date is null or given
+  function validation() {
+var date = document.getElementById("datemonth").value;
+if (date === '') {
+alert("Please select date");
+return false;
+}else {
+  return true
+}
+
+}
+
+
+function submit_by_id() {
+
+var date = document.getElementById("datemonth").value;
+if (validation()) // Calling validation function
+{
+document.getElementById("slots").style.display="block"; //form submission
+}
+ //event.preventDefault(); //base condition for display slots
+}
+    // JavaScript to handle seat selection
+
+    let selectedSlot = null;
+    function toggleSlot(slotId) {
+        const slot = document.getElementById(slotId);
+        if (slot.classList.contains('selected')) {
+            // Deselect the slot
+            slot.classList.remove('selected');
+            selectedSlot = null;
+        } else {
+            // Select the slot and block others
+            if (selectedSlot) {
+                document.getElementById(selectedSlot).classList.remove('selected');
+            }
+            slot.classList.add('selected');
+            selectedSlot = slotId;
+        }
+
+        // Block all slots except the selected one
+        const allSlots = document.querySelectorAll('.slotsize1');
+        allSlots.forEach((s) => {
+            if (s.id !== selectedSlot) {
+                s.classList.add('avaliable');
+            } else {
+                s.classList.remove('avaliable');
+            }
+        });
+    }
+
+        function performAction() {
+            if (!selectedSlot) {
+                alert("Please select a slot before performing the action.");
+            } else {
+                // Perform the action here
+                alert(selectedSlot +"  is booked successfully");
+            }
+        }
+
+
+   
+
+</script>
+
+ 
+
+</body>
+
+</html>
+=======
             <input type="date" class="dateinput" id="datemonth" name="datemonth" required>
             <input onclick="submit_by_id()" type="submit" class="submitbutton">
         </div>  
@@ -322,3 +586,4 @@ document.getElementById("slots").style.display="block"; //form submission
 </body>
 
 </html>
+>>>>>>> origin/venkat

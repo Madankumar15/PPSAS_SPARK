@@ -236,7 +236,7 @@ img {vertical-align: middle;}
 
 /* ################ footer ############ */
 footer {
-
+  
   background-color: #333;
   color: #fff;
   padding: 20px 0;
@@ -301,6 +301,6 @@ footer {
 }
 /* Add more icon styles as needed for other social media platforms */
 .foot{
-margin-top: 30px;
+margin-top: 40px;
 }  
 
