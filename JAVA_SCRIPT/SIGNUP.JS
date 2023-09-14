@@ -7,6 +7,7 @@ const passwordInput = document.querySelector('input[name="password"]');
 const confirmPasswordInput = document.querySelector('input[name="confirm_password"]');
 const signupButton = document.querySelector('.signup-box form a');
 
+
 // Function to validate the form data
 function validateForm() {
     const firstName = firstNameInput.value.trim();

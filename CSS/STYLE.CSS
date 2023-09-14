@@ -74,12 +74,12 @@ div.LOGO{
   text-align: center;
   line-height: 25px;
 }
-#Home p{
-  width: 50%;
-  line-height: 25px;
-  text-align: center;
-  justify-content: center;
-}
+/* #Home p{ */
+  /* width: 50%; */
+  /* line-height: 25px; */
+  /* text-align: center; */
+  /* justify-content: center; */
+/* } */
 .pre-hm a.hme {
   color: #fff;
   /* background-color: red; */
@@ -87,6 +87,41 @@ div.LOGO{
 .pre-hm a.hme:hover {
   color:red;
   background-color:#fff;
+  /* border-radius: 10px; */
+  transition: background-color 0.6s ease;
+}
+
+.pre-hM a.abt {
+  color: #fff;
+  /* background-color: red; */
+}
+.pre-hm a.abt:hover {
+  color:red;
+  background-color:#fff;
+  /* border-radius: 10px; */
+  transition: background-color 0.6s ease;
+}
+
+.pre-hm a.lgn {
+  color: #fff;
+  /* background-color: red; */
+}
+.pre-hm a.lgn:hover {
+  color:red;
+  background-color:#fff;
+  /* border-radius: 10px; */
+  transition: background-color 0.6s ease;
+}
+
+.pre-hm a.cnt {
+  color: #fff;
+  /* background-color: red; */
+}
+.pre-hm a.cnt:hover {
+  color:red;
+  background-color:#fff;
+  /* border-radius: 10px; */
+  transition: background-color 0.6s ease;
 }
 
 @media(max-width:769px){
@@ -195,9 +230,9 @@ img {vertical-align: middle;}
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+/* @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
-}
+} */
 
 /* ################ footer ############ */
 footer {

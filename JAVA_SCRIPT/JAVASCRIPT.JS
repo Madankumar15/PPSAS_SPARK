@@ -19,9 +19,9 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
-    $('#menu-btn').click(function(){
-    $('nav .navigation ul').addClass('active')
-    });
-    $('#menu-close').click(function(){
-    $('nav .navigation ul').removeClass('active')
-    }); 
+    // $('#menu-btn').click(function(){
+    // $('nav .navigation ul').addClass('active')
+    // });
+    // $('#menu-close').click(function(){
+    // $('nav .navigation ul').removeClass('active')
+    // }); 
