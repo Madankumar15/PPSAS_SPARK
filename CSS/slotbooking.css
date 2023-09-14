@@ -87,6 +87,7 @@ margin-left: 370px;
 margin-top: 40px;
 }
   
+<<<<<<< HEAD
   .submitbutton{
     padding-left: 11px;
     padding-right: 11px;
@@ -95,6 +96,16 @@ margin-top: 40px;
     margin-left: 10px;
   }
 
+=======
+  
+input.submitbutton{
+  padding: 10px;
+  margin-left: 10px;
+  width: 150px;
+  
+  
+}
+>>>>>>> origin/venkat
 
 
 .row{
