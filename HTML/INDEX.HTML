@@ -7,7 +7,6 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
-</head>
   <link rel="stylesheet" href="/CSS/STYLE.CSS">
   <title>Doc</title>
 </head>
@@ -33,6 +32,18 @@
             <li><a class="abt" href="#">ABOUT</a></li>
             <li><a class="lgn" href="ALTLOGIN.HTML" >LOGIN</a></li>
             <li><a  class="cnt"href="INDEX.HTML">CONTACT</a></li>
+            <li class="profile-icon">
+                <a href="#">
+                    <img src="/IMAGES/user-icon.png" alt="User Profile">
+                </a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </li>
             <!-- <nav class="hamburgericon"><a href="javascript:void(0);" onclick="dropdownmenu()">&#9776</a></nav> -->
         </ul>
         <img  id="menu-btn" src="/IMAGES/menu.png" alt="" >
@@ -72,8 +83,19 @@
           <span class="dot"></span> 
           <span class="dot"></span> 
         </div>
-  </section>
-  <script src="/JAVA_SCRIPT/JAVASCRIPT.JS"></script>
+      </div>
+  </section> 
+<script src="/JAVA_SCRIPT/JAVASCRIPT.JS" defer></script>
+    <script>
+        $(document).ready(function() {
+            console.log("Click event listener is active."); // Debugging line
+            $(".profile-icon").click(function() {
+                console.log("Clicked"); // Debugging line
+                // Toggle the visibility of the dropdown menu
+                $(".dropdown-menu").toggle();
+        });
+});
+    </script>
 </body>
 <footer class="foot">
 
