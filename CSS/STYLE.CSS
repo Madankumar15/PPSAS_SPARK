@@ -137,10 +137,9 @@ div.LOGO{
     border: 1px solid #ccc; 
 }
 
-/
 .dropdown-menu li {
     display: flex; 
-    padding: ; 
+    /* padding:  */
     text-align: center;
     white-space: nowrap; 
     color: black;
@@ -175,6 +174,7 @@ div.LOGO{
 .dropdown-menu ul li:hover {
     background-color: transaparent;
     box-shadow: 0 0 12px white;
+
     
 }
 
@@ -186,18 +186,18 @@ div.LOGO{
 
 
 
-@media(max-width:769px){
+/* @media(max-width:769px){
   nav{
     padding: 15px 20px;
-  }
+  } */
   /* nav img{
     width: 130px;
     cursor: pointer;
   } */
-  #menu-btn{
+  /* #menu-btn{
     /* width: 30px;
     height: 30px;
-    margin-top: 22px; */
+    margin-top: 22px;
     display: initial;
   }
   #menu-close{
@@ -225,8 +225,8 @@ div.LOGO{
   } 
   nav .navigation ul li a{
     color:#ffffff ; 
-  }
-}
+  } 
+} 
 /* pre {
    */
 /* font-size: 0.9rem};  */
@@ -362,7 +362,7 @@ footer {
   content: "\f16d"; /* Instagram icon */
 }
 /* Add more icon styles as needed for other social media platforms */
-.foot{
+#footer{
 margin-top: 40px;
 }  
 
