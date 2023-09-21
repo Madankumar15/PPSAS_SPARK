@@ -4,24 +4,23 @@
 } */
 nav{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     box-shadow:2px 2px 10px rgba(0,0,0.15) ;
-    padding: 1vw 8vw;
-    position: absolute;
+    padding: 1vw 8vw;   
     width: 85%;
-    background-color:rgb(255, 43, 43);
-    z-index: 100;
+    border-radius: 7px;
+    background-color: rgb(255, 43, 43);
   }
   nav .navigation ul{
     display: flex;
     justify-content: flex-end ;
     align-items: center;
   }
-  nav .navigation ul li{
+    .navigation ul li{
     list-style: none;
     margin: 10px;
+    padding: 7px;
   }
   nav .navigation ul li a{
     text-decoration:none;
@@ -30,9 +29,14 @@ nav{
     font-weight: 500;
     transition: 0.3s ease;
   }
-  nav .navigation ul li a:hover{
-    color: #ffffff;
-  } 
+
+/*
+  .navigation ul li a:hover{
+    background-color: transparent;
+    box-shadow: 0 0 12px 0.7;
+} 
+*/
+
   nav .LOGO i{
     color: #ffffff;
   }
@@ -41,45 +45,20 @@ nav{
     color: #fff;
     /* background-color: red; */
   }
-  .pre-hm a.hme:hover {
-    color:red;
-    background-color:#fff;
-    /* border-radius: 10px; */
-    transition: background-color 0.6s ease;
+
+  .navigation ul li:hover {
+    background-color: transparent;
+    box-shadow: 
+    0 0 80px white,
+    0 0 20px white,
+    0 0 10px white;
+/*    position: block;*/
+    border-radius: 5px ;
+    padding: 7px;
+      box-sizing: border-box;
   }
   
-  .pre-hM a.abt {
-    color: #fff;
-    /* background-color: red; */
-  }
-  .pre-hm a.abt:hover {
-    color:red;
-    background-color:#fff;
-    /* border-radius: 10px; */
-    transition: background-color 0.6s ease;
-  }
   
-  .pre-hm a.lgn {
-    color: #fff;
-    /* background-color: red; */
-  }
-  .pre-hm a.lgn:hover {
-    color:red;
-    background-color:#fff;
-    /* border-radius: 10px; */
-    transition: background-color 0.6s ease;
-  }
-  
-  .pre-hm a.cnt {
-    color: #fff;
-    /* background-color: red; */
-  }
-  .pre-hm a.cnt:hover {
-    color:red;
-    background-color:#fff;
-    /* border-radius: 10px; */
-    transition: background-color 0.6s ease;
-  }
   body{
     width: 100%;
     height: 100%; 
@@ -87,21 +66,17 @@ nav{
     font-family: sans-serif; 
 } 
 .main{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 1px;
-    background: rgb(255, 43, 43);
-    box-shadow: 0 0 5px rgba(97, 16, 16, 0.5),0 0 25px rgba(97, 16, 16, 0.5),0 0 50px rgba(97, 16, 16, 0.5),0 0 100px rgb(255, 0, 0);
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 .login-box{
     width: 400px;
     padding: 40px;
-    background:rgba(235, 14, 14, 0.5);
+/*    background:rgba(235, 14, 14, 0.5);*/
     border-radius: 10px;
+    background: rgb(255, 43, 43);
+    box-shadow: 0 0 5px rgba(97, 16, 16, 0.5),0 0 25px rgba(97, 16, 16, 0.5),0 0 50px rgba(97, 16, 16, 0.5),0 0 100px rgb(255, 0, 0);
 }
 .login-box h2{
     margin:  0 0 30px;
@@ -193,6 +168,79 @@ box-shadow: 0 0 5px rgb(201, 196, 196),0 0 25px rgb(201, 196, 196),0 0 50px rgb(
     animation: btn1 .75s linear infinite;
     animation-delay: .25s;
 }
+
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: rgb(255, 43, 43);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 220px;
+    width: 320px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close:hover{
+    background-color: transparent;
+    box-shadow: 0 0 12px white;
+}
+
+/* Style for the form and its elements */
+#forgot-password-form {
+    text-align: center;
+    color: yellow;
+    width: 500px;
+}
+
+#user-email {
+    width: 95%;
+    padding: 10px;
+    /* margin-right: 10px; */
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+
+#login{
+    margin-right: 120px;
+}
+button[type="submit"] {
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover{
+  background-color: #007bff;
+  box-shadow: 0 0 12px white;
+}
+
 @keyframes btn1 {
     0%{
         left: -100%;
