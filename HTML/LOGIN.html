@@ -14,7 +14,7 @@ nav{
   padding: 1vw 8vw;
   position: absolute;
   width: 100%;
-  background-color:#e43636;
+  background-color: rgb(255, 43, 43);
   z-index: 100;
 }
 nav .navigation ul{
@@ -25,20 +25,81 @@ nav .navigation ul{
 nav .navigation ul li{
   list-style: none;
   margin: 10px;
+/*    color: black;*/
 }
 nav .navigation ul li a{
-  text-decoration:none;
+  text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 500;
   transition: 0.3s ease;
+/*  border-radius: 7px;*/
+/*    box-shadow:  0 0px 12px;*/
 }
 nav .navigation ul li a:hover{
-  color: #ffffff;
+    background-color: transparent;
+    box-shadow: 0 0 12px white;
 } 
 nav .LOGO i{
   color: #ffffff;
 }
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    z-index: 1; 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+}
+
+.dropdown-menu li {
+    display: flex;  
+    text-align: center;
+    white-space: nowrap; 
+/*    color: black;*/
+    background-color: red;
+    align-items: center;
+}
+
+.dropdown-menu ul{
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    border-radius: 10px;
+    padding: 10px 35px 1px 10px;
+    background-color: rgb(255, 43, 43);
+}
+
+.dropdown-menu ul li{
+    padding: 8px;
+    border-radius: 7px;
+    color: aqua;
+    background-color: rgb(255, 43, 43);
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+
+
+
+.dropdown-menu ul li:hover {
+    background-color: transparent;
+    box-shadow: 0 0 12px white;
+    
+}
+
+
+/* Active class for the dropdown menu to show it */
+.dropdown-menu.active {
+    display: block;
+}
+
+
 form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
@@ -111,19 +172,28 @@ span.psw {
     <section class="pre-hm">
         <nav class="tumu">
           <div class="LOGO">
-          <i class='bx bxs-parking bx-tada' ></i>
-        </div>
-          <div class="navigation">
-              <ul>
-                  <li><a class="hme" href="INDEX.HTML">HOME</a></li>
-                  <li><a class="abt" href="#">ABOUT</a></li>
-                  <li><a class="lgn" href="LOGIN.html" >LOGIN</a></li>
-                  <li><a  class="cnt"href="INDEX.HTML">CONTACT</a></li>
-              </ul>
-              <span class="fa fa-bars"></span>
-          </div>
+            <i class='bx bxs-parking bx-tada' ></i>
+            </div>
+              <div class="navigation">
+                  <ul>
+                      <li><a class="hme" href="INDEX.HTML">HOME</a></li>
+                      <li><a class="abt" href="#">ABOUT</a></li>
+                      <li><a class="lgn" href="LOGIN.html" >LOGIN</a></li>
+                      <li><a  class="cnt"href="INDEX.HTML">CONTACT</a></li>
+                      <li class="profile-icon"><a href="#"><img src="/IMAGES/user-icon.png" alt="User Profile"></a>
+                          <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                         </div>
+                      </li>
+                  </ul>
+                  <span class="fa fa-bars"></span>
+              </div>
         </nav>
-        </section>
+    </section>
 
 <h2 class="h2-login">Login </h2>
 
@@ -150,6 +220,21 @@ span.psw {
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    // Function to toggle the visibility of the dropdown menu
+    $(".profile-icon").click(function () {
+        $(".dropdown-menu").toggleClass("active");
+    });
 
+    // Event listener to close the dropdown when clicking outside of it
+    $(document).on("click", function (event) {
+        if (!$(event.target).closest(".profile-icon").length && !$(event.target).closest(".dropdown-menu").length) {
+            $(".dropdown-menu").removeClass("active");
+        }
+    });
+});
+</script>
 </body>
 </html>

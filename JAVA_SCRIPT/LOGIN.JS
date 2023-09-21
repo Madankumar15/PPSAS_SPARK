@@ -8,7 +8,7 @@ function validateForm() {
     const password = passwordInput.value;
 if ( username === '' || password === '' ) {
     alert('Please fill in all fields.');
-    // return false;
+    return false;
 }
 return true;
 }
@@ -19,10 +19,10 @@ LoginButton.addEventListener('click', (e) => {
     if (validateForm()) {
         // Form is valid, you can perform further actions here
         // For example, you can send the form data to the server using an AJAX request
-
+   
         // For demonstration purposes, we'll just display a success message
-        alert('Login successful!'); // Replace this with your actual signup logic
-        // window.location.href = 'ALTLOGIN.HTML';
+        // alert('Login successful!'); // Replace this with your actual signup logic
+         window.location.href = 'slotbooking.HTML';
 
         // You can also redirect the user to a different page after successful signup
         // Example: window.location.href = 'success.html';
