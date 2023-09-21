@@ -1,0 +1,55 @@
+/* Reset some default styles for the example */
+body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: red;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    overflow-y: auto;
+    transition: left 0.3s;
+}
+
+.sidebar h1 {
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+/* Content styles */
+.content {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+header {
+    background-color:red;
+    color: #fff;
+    padding: 20px;
+}
+
+

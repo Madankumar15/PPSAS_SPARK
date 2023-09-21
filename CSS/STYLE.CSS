@@ -171,7 +171,6 @@ div.LOGO{
   color: #fff;
    background-color: red; 
 */
-}
 /*.pre-hm a.lgn:hover {*/
 /*
   color:red;
@@ -194,20 +193,73 @@ div.LOGO{
    border-radius: 10px; 
   transition: background-color 0.6s ease;
 }
-*/
 
-@media(max-width:769px){
+
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    z-index: 1; 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+}
+
+.dropdown-menu li {
+    display: flex; 
+    /* padding:  */
+
+.dropdown-menu ul{
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    border-radius: 10px;
+    padding: 10px 35px 1px 10px;
+    background-color: rgb(255, 43, 43);
+}
+
+.dropdown-menu ul li{
+    padding: 8px;
+    border-radius: 7px;
+    color: aqua;
+    background-color: rgb(255, 43, 43);
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+
+
+
+.dropdown-menu ul li:hover {
+    background-color: transaparent;
+    box-shadow: 0 0 12px white;
+
+    
+}
+
+
+/* Active class for the dropdown menu to show it */
+.dropdown-menu.active {
+}
+
+
+/* @media(max-width:769px){
   nav{
     padding: 15px 20px;
-  }
+  } */
   /* nav img{
     width: 130px;
     cursor: pointer;
   } */
-  #menu-btn{
+  /* #menu-btn{
     /* width: 30px;
     height: 30px;
-    margin-top: 22px; */
+    margin-top: 22px;
     display: initial;
   }
   #menu-close{
@@ -235,8 +287,8 @@ div.LOGO{
   } 
   nav .navigation ul li a{
     color:#ffffff ; 
-  }
-}
+  } 
+} 
 /* pre {
    */
 /* font-size: 0.9rem};  */
@@ -371,7 +423,7 @@ footer {
   content: "\f16d"; /* Instagram icon */
 }
 /* Add more icon styles as needed for other social media platforms */
-.foot{
+#footer{
 margin-top: 40px;
 }  
 

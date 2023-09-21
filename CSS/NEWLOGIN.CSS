@@ -12,6 +12,11 @@ nav{
     border-radius: 7px;
     background-color: rgb(255, 43, 43);
   }
+
+  nav .navigation{
+    display: flex;
+  } 
+  
   nav .navigation ul{
     display: flex;
     justify-content: flex-end ;
@@ -66,6 +71,15 @@ nav{
     font-family: sans-serif; 
 } 
 .main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1px;
+    background: rgb(255, 43, 43);
+    box-shadow: 0 0 5px rgba(97, 16, 16, 0.5),0 0 25px rgba(97, 16, 16, 0.5),0 0 50px rgba(97, 16, 16, 0.5),0 0 100px rgb(255, 0, 0);
+    border-radius: 10px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -159,7 +173,7 @@ box-shadow: 0 0 5px rgb(201, 196, 196),0 0 25px rgb(201, 196, 196),0 0 50px rgb(
     position: absolute;
     display:block;
 }
-.login-box a span:nth-child(1){
+/* .login-box a span:nth-child(1){
     top: 0;
     left: -100%;
     width: 100%;
@@ -305,4 +319,72 @@ button[type="submit"]:hover{
         bottom: 100%;
     }
     
-}
+} */
+footer {
+  
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .container {
+  
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details, .social-icons {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .contact-details h3, .social-icons h3 {
+  
+    font-size: 18px;
+  
+    margin-bottom: 10px;
+  
+  }
+  
+  .contact-details p {
+    margin: 0;
+  }
+  
+  .social-icons ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icons li {
+    margin: 0 10px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  /* Font Awesome Icons Styles (assuming you're using Font Awesome) */
+  
+  .fa-facebook:before {
+    content: "\f09a"; /* Facebook icon */
+  }
+  
+  .fa-twitter:before {
+    content: "\f099"; /* Twitter icon */
+  }
+  
+  
+  
+  .fa-instagram:before {
+    content: "\f16d"; /* Instagram icon */
+  }
+  /* Add more icon styles as needed for other social media platforms */
+  #footer{
+  margin-top: 40px;
+  } 
