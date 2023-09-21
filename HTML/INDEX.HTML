@@ -28,6 +28,15 @@
     <div class="navigation">  
         <ul>
           <i id="menu-close" class="fas fa-times"></i>
+            <li><a class="hme" href="INDEX.HTML">HOME</a></li>
+            <li><a class="abt" href="#">ABOUT</a></li>
+            <li><a class="lgn" href="ALTLOGIN.HTML" >LOGIN</a></li>
+            <li><a  class="cnt"href="#footer">CONTACT</a></li>
+            <li class="profile-icon">
+                <a href="#">
+                    <img src="/IMAGES/user-icon.png" alt="User Profile">
+                </a>
+                <div class="dropdown-menu">
             <li><a href="INDEX.HTML">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a id="login-trigger" href="#">LOGIN</a></li>
@@ -72,7 +81,7 @@
         </div>
         <br>
         
-        <div style="text-align:center">
+        <div style="text-align:center; ">
           <span class="dot"></span> 
           <span class="dot"></span> 
           <span class="dot"></span> 
@@ -80,8 +89,36 @@
       </div>
   </section> 
 <script src="/JAVA_SCRIPT/JAVASCRIPT.JS" defer></script>
+    <script>
+        $(document).ready(function() {
+            console.log("Click event listener is active."); // Debugging line
+            $(".profile-icon").click(function() {
+                console.log("Clicked"); // Debugging line
+                // Toggle the visibility of the dropdown menu
+                $(".dropdown-menu").toggle();
+        });
+});
+    </script>
+    <!-- <script>
+      // Get a reference to the "Contact" button and the footer element
+const cnt = document.getElementsByClassName("cnt");
+const foot = document.getElementsByClassName("foot");
+
+// Add a click event listener to the button
+cnt.addEventListener("click", () => {
+    // Use smooth scrolling to scroll to the footer
+    foot.scrollIntoView({ behavior: "smooth" });
+});
+
+    </script> -->
+    <script>
+      document.getElementsByClassName('cnt').addEventListener('click', function() {
+          const footer = document.getElementById('footer');
+          footer.scrollIntoView({ behavior: 'smooth' });
+      });
+  </script>
 </body>
-<footer class="foot">
+<footer id="footer">
 
   <div class="container">
 
