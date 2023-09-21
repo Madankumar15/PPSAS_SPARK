@@ -19,6 +19,22 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
+//document.addEventListener("DOMContentLoaded", function () {
+//    const loginTrigger = document.getElementById("login-trigger");
+//    const loginDropdown = document.getElementById("login-dropdown");
+//
+//    loginTrigger.addEventListener("click", function (e) {
+//        e.preventDefault();
+//        if (loginDropdown.style.display === "block") {
+//            loginDropdown.style.display = "none";
+//        } else {
+//            loginDropdown.style.display = "block";
+//        }
+//    });
+//});
+
+
+
     // $('#menu-btn').click(function(){
     // $('nav .navigation ul').addClass('active')
     // });

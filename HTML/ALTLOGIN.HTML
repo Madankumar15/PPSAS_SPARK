@@ -26,10 +26,10 @@
         </div>
           <div class="navigation">
               <ul>
-                  <li><a class="hme" href="/HTML/INDEX.HTML">HOME</a></li>
-                  <li><a class="abt" href="#">ABOUT</a></li>
+                  <li><a href="/HTML/INDEX.HTML">HOME</a></li>
+                  <li><a href="#">ABOUT</a></li>
                   <!-- <li><a class="lgn" href="/HTML/ALTLOGIN.HTML" >LOGIN</a></li> -->
-                  <li><a  class="cnt" href="/HTML/INDEX.HTML">CONTACT</a></li>
+                  <li><a href="/HTML/INDEX.HTML">CONTACT</a></li>
               </ul>
               <!-- <img src="/IMAGES/menu.png"> -->
               <!-- <span class="fa fa-bars"></span> -->
@@ -53,29 +53,87 @@
                     <input type="checkbox" id="passwordshow" class="show">
                     <label for="passwordshow">Show</label>
                 </div>
-                <a href="/HTML/slotbooking.html">
+                <a id="login" href="/HTML/slotbooking.html">
                     Login
                 </a>
                 <a href="/HTML/SIGNUP.HTML">
                     SIGNUP
                 </a>
+                <center><a href="#" id="forgot-password-link">Forgot Password?</a></center>
+                <div id="forgot-password-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Forgot Password</h2>
+                        <p>Enter the email you want to send the link to:</p>
+                        <form id="forgot-password-form">
+                            <div class="form-group">
+                                <input type="email" id="user-email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">Send Reset Link</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
     <script src="/JAVA_SCRIPT/LOGIN.JS"></script>
-    <!-- <script>
-        const show=document.querySelector(".show");
-        const pass=document.querySelector(".pass");
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("forgot-password-modal");
+    const form = document.getElementById("forgot-password-form");
+    const userEmailInput = document.getElementById("user-email");
+    const closeButton = document.querySelector(".close");
 
-show.addEventListener("click",()=>{
-    if(show.checked){
-        pass.setAttribute("type","text");
+    // Function to open the modal
+    function openModal() {
+        modal.style.display = "block";
     }
-    else{
-        pass.setAttribute("type","password");
+
+    // Function to close the modal
+    function closeModal() {
+        modal.style.display = "none";
     }
-})
-    </script> -->
+
+    // Event listener to open the modal when the "Forgot Password" link is clicked
+    document.getElementById("forgot-password-link").addEventListener("click", function (e) {
+        e.preventDefault();
+        openModal();
+    });
+
+    // Event listener to close the modal when the close button is clicked
+    closeButton.addEventListener("click", function () {
+        closeModal();
+    });
+
+//    // Event listener to close the modal when clicking outside of it
+//    window.addEventListener("click", function (e) {
+//        if (e.target === modal) {
+//            closeModal();
+//        }
+//    });
+
+    // Event listener for form submission
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const userEmail = userEmailInput.value;
+
+        if (!userEmail.endsWith("@abc.com")) {
+            // Email does not contain the required domain
+            alert("Email address must end with @abc.com.");
+            return;
+        }
+
+        // If the email is valid, proceed with your logic
+        console.log("Password reset link will be sent to: " + userEmail);
+
+        // Close the modal after successful submission
+        closeModal();
+    });
+});
+ 
+</script>
 </body>
 
 </html>
