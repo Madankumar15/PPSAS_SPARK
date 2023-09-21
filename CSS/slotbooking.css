@@ -86,8 +86,105 @@ cursor: pointer;
 margin-left: 370px;
 margin-top: 40px;
 }
-  
-<<<<<<< HEAD
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+
+}
+
+ 
+
+/* Style the heading */
+
+h1 {
+
+  font-size: 24px;
+
+  margin-bottom: 20px;
+
+}
+
+ 
+
+/* Style the slots container */
+
+.slots {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+}
+
+ 
+
+/* Style the slot button */
+
+.slot-button {
+
+  background-color: #3498db;
+
+  color: #fff;
+
+  border: none;
+
+  padding: 10px 20px;
+
+  margin: 5px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+
+}
+
+ 
+
+/* Style for available slots */
+
+.slot-button.available {
+
+  background-color: #2ecc71;
+
+}
+
+ 
+
+/* Style for occupied slots */
+
+.slot-button.occupied {
+
+  background-color: #e74c3c;
+
+}
+
+ 
+
+/* Style for selected slots */
+
+.slot-button.selected {
+
+  background-color: #f39c12;
+
+  cursor: not-allowed;
+
+}
+
+ 
+
+/* Disable the button appearance for selected slots */
+
+.slot-button.selected:disabled {
+
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+}
   .submitbutton{
     padding-left: 11px;
     padding-right: 11px;
@@ -96,7 +193,6 @@ margin-top: 40px;
     margin-left: 10px;
   }
 
-=======
   
 input.submitbutton{
   padding: 10px;
@@ -105,7 +201,7 @@ input.submitbutton{
   
   
 }
->>>>>>> origin/venkat
+
 
 
 .row{
@@ -216,6 +312,7 @@ input.submitbutton{
 .slot{
   padding-left: 100px;
 }
+/* footer css style */
 footer {
   background-color: #333;
   color: #fff;

@@ -10,7 +10,6 @@
 </head>
   <link rel="stylesheet" href="/CSS/slotbooking.css">
   <title>Document</title>
-<<<<<<< HEAD
 </head>
 <style>
 
@@ -24,8 +23,6 @@
         
     }
 </style>
-=======
->>>>>>> origin/venkat
 </head>
 <body>
   <section class="pre-hm">
@@ -39,13 +36,8 @@
           <i id="menu-close" class="fas fa-times"></i>
             <li><a class="hme" href="INDEX.HTML">HOME</a></li>
             <li><a class="abt" href="#">ABOUT</a></li>
-<<<<<<< HEAD
             <li><a class="lgn" href="INDEX.HTML" >LOGOUT</a></li>
             <li><a  class="cnt"href="#foot1">CONTACT</a></li>
-=======
-            <li><a class="lgn" href="ALTLOGIN.HTML" >LOGIN</a></li>
-            <li><a  class="cnt"href="INDEX.HTML">CONTACT</a></li>
->>>>>>> origin/venkat
             <!-- <nav class="hamburgericon"><a href="javascript:void(0);" onclick="dropdownmenu()">&#9776</a></nav> -->
 
     </ul>
@@ -61,7 +53,6 @@
         <form action="" id="search_slot">
         <div class="col-4 dateblock">  
             <label class="datename" for="datemonth"><b>Date</b></label>
-<<<<<<< HEAD
             <input type="date" class="dateinput" id="datemonth" name="datemonth" min="" required>
             <input onclick="submit_by_id()"  type="submit" class="submitbutton">
         </div>  
@@ -253,7 +244,7 @@ if (validation()) // Calling validation function
 {
 document.getElementById("slots").style.display="block"; //form submission
 }
- //event.preventDefault(); //base condition for display slots
+ event.preventDefault(); //base condition for display slots
 }
     // JavaScript to handle seat selection
 
@@ -284,6 +275,33 @@ document.getElementById("slots").style.display="block"; //form submission
         });
     }
 
+    var csrfToken = "{{ csrf_token }}"; // Get the CSRF token from the Django template
+    $(document).ready(function () {
+        $(".slot-button").click(function () {
+            var slotId = $(this).data("slotid");
+            var button = $(this);
+            if (!button.hasClass("selected") && button.hasClass("available")) {
+                $.ajax({
+                    url: "",
+                    method: "",
+                    headers: {
+                        "X-CSRFToken": csrfToken, // Include the CSRF token in the headers
+                    },
+                    data: { slotid: slotId },
+                    success: function (data) {
+                        if (data.message === "Slot booked successfully.") {
+                            button.removeClass("available").addClass("selected").prop("disabled", true);
+                        }
+                        alert(data.message);
+                    },
+                    error: function () {
+                        alert("An error occurred while booking the slot.");
+                    },
+                });
+            }
+        });
+    });
+
         function performAction() {
             if (!selectedSlot) {
                 alert("Please select a slot before performing the action.");
@@ -303,287 +321,3 @@ document.getElementById("slots").style.display="block"; //form submission
 </body>
 
 </html>
-=======
-            <input type="date" class="d ateinput" id="datemonth" name="datemonth" required>
-            <input onclick="submit_by_id()" type="submit" class="submitbutton">
-        </div>  
-
-      </form>
-
-    </div>
-    <div>
-
- 
-
-    </div>
-
-    <div class="row slotsize" id="slots" style="display: none;">
-
-        <div class="row row-1" >
-            <div class="col-2"><button class="slotsize1">1</button></div>
-            <div class="col-2"><button class="slotsize1">2</button></div>
-            <div class="col-2"><button class="slotsize1">3</button></div>
-            <div class="col-2"><button class="slotsize1">4</button></div>
-            <div class="col-2"><button class="slotsize1">5</button></div>
-        </div>  
-    <div class="row row-2">    
-            <div class="col-2"><button class="slotsize1" onclick="selectSeat(this)"><b>6</b></button></div>
-            <div class="col-2"><button class="slotsize1" onclick="selectSeat(this)">7</button></div>
-            <div class="col-2"><button class="slotsize1" onclick="selectSeat(this)">8</button></div>
-            <div class="col-2"><button class="slotsize1" onclick="selectSeat(this)">9</button></div>
-            <div class="col-2"><button class="slotsize1" onclick="selectSeat(this)">10</button></div>
-    </div>
-
-<ul class="required">
-    <div class="slot1">
-        <li>
-            <div class="slot ">
-
-                <div class="space na"></div>
-
-                <medium>N/A</medium>
-            </div>
-        </li>
-        <li>
-            <div class="slot occupied">
-                <div class="space occupied"></div>
-                <medium>Occupied</medium>
-            </div>
-        </li>
-        <li>
-            <div class="slot selected">
-                <div class="space selected"></div>
-                <medium>Selected</medium>
-            </div>
-        </li>
-    </div>
-</ul>
-<div>
-  <button class="bookslot"onclick="showAlert()"><b>Book Slot</b</button>
-</div>  
-</div>
-
-       
-
-            <!-- <tr>
-
-                <th><button>13</button></th>
-
-                <th><button>14</button></th>
-
-                <th><button>15</button></th>
-
-                <th><button>16</button></th>
-
-                <th><button>17</button></th>
-
-                <th><button>18</button></th>
-
-                <th><button>19</button></th>
-
-                <th><button>20</button></th>
-
-                <th><button>21</button></th>
-
-                <th><button>22</button></th>
-
-                <th><button>23</button></th>
-
-                <th><button>24</button></th>
-
-            </tr> -->
-
-       
-
-   
-
-</div>
-</div>
-<footer class="foot">
-  <div class="container">
-    <div class="contact-details">
-      <h3>Contact Us</h3>
-      <p>Email: example@email.com</p>
-      <p>Phone: +1 (123) 456-7890</p>
-      <p>Address: 123 Street, City, Country</p>
-    </div>
-    <div class="social-icons">
-      <h3>Follow Us</h3>
-      <ul>
-        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <!-- Add more social media icons as needed -->
-
-      </ul>
-    </div>
-  </div>
-
-</footer>
-
- 
-
-</body>
-
-<!-- <script>
-
-    function myFunction() {
-
-        var x = document.getElementById("myDIV");
-
-        if (x.style.display === "none") {
-
-            x.style.display = "block";
-
-        } else {
-
-            x.style.display = "none";
-
-        }
-
-    }
-
-</script> -->
-
-<script>
-
-  let selectedSeat = null;
-
-  function selectSeat(slotsize1) {
-
-    if (selectedSeat) {
-
-          // Deselect the previously selected seat
-
-          selectedSeat.classList.remove('selected1');
-
-    }
-
- 
-
-      // Select the clicked seat
-
-    seat.classList.add('selected1');
-
-    selectedSeat = slotsize1;
-
-}
-
-  function validation() {
-
- 
-
-var date = document.getElementById("datemonth").value;
-
- 
-
- 
-
- 
-
-if (date === '') {
-
- 
-
-alert("Please select date");
-
- 
-
-return false;
-
- 
-
-}else {
-
- 
-
-  return true;
-
- 
-
-}
-
- 
-
-}
-
- 
-
- 
-
- 
-
- 
-
- 
-
-function submit_by_id() {
-
- 
-
-var date = document.getElementById("datemonth").value;
-
- 
-
-if (validation()) // Calling validation function
-
- 
-
-{
-
- 
-
-document.getElementById("slots").style.display="block"; //form submission   
-
- 
-
- 
-
- 
-
-}
-
- event.preventDefault(); //base condition for display slots
-
-}
-
- 
-
-  function showAlert() {
-
-            alert('Slot Booked Successfully'); // Display an alert with the message
-
-        }
-
-    // JavaScript to handle seat selection
-
-    const seatButtons = document.querySelectorAll('.slotsize1');
-
- 
-
-    seatButtons.forEach((button) => {
-
-    button.addEventListener('click', () => {
-
-    if (!button.classList.contains('blocked')) {
-
-        // Toggle the 'selected' class if the seat is not blocked
-
-        button.classList.toggle('selected');
-
-    }
-
-});
-
-});
-
-   
-
-</script>
-
- 
-
-</body>
-
-</html>
->>>>>>> origin/venkat
